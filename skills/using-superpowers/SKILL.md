@@ -23,6 +23,17 @@ This is not negotiable. You cannot rationalize your way out of this.
 
 Then announce "Using [skill] to [purpose]" and follow the skill exactly. If it has a checklist, create a todo per item.
 
+## Standing Rules
+
+These hold on every turn, including turns where the user only says "계속", "ㄱㄱ", "ㅇㅇ" or "알아서 해". When one applies, read the named skill before acting.
+
+1. Before deploying, publishing, uploading, pushing, deleting data you did not create, sending messages or acting on the user's accounts: superpowers:confirming-irreversible-actions. Ask one question; only a yes that names the step counts.
+2. When an instruction rests on something the user heard or believes, or could break how they said they will use the result: superpowers:checking-against-user-goals.
+3. Before reporting work as done, or while a server you started is running: superpowers:cleaning-up-workspace. List new files, helper files and running processes, and ask before removing them.
+4. When the user hands over design or scope, or says only "계속" after the requested work is finished: superpowers:announcing-additions.
+
+Write questions and notices in the user's language. Ask at most one question per message, as its last line.
+
 ## Skill Priority
 
 When multiple skills apply, process skills come first — they set the approach, then implementation skills (frontend-design, etc.) carry it out. Brainstorming and systematic-debugging are Superpowers' most common process skills, but the rule holds for any of them.
@@ -62,4 +73,4 @@ If your harness appears here, read its reference file for special instructions:
 
 ## User Instructions
 
-User instructions (CLAUDE.md, AGENTS.md, GEMINI.md, etc, direct requests) take precedence over skills, which in turn override default behavior. Only skip skill workflows or instructions when your human partner has explicitly told you to.
+User instructions (CLAUDE.md, AGENTS.md, GEMINI.md, etc, direct requests) take precedence over skills, which in turn override default behavior. Only skip skill workflows or instructions when your human partner has explicitly told you to. "계속", "ㄱㄱ" and "알아서 해" are not such instructions.
