@@ -11,4 +11,15 @@ SP+ is a local fork of superpowers 7.0.1 used in persona experiments with novice
 
 Pilot 1 showed that the agent read `using-superpowers` on the first turn of every session and rarely opened skills after the second turn, while the short replies come later. `using-superpowers` therefore carries a short "Standing Rules" section that names each rule, so the rules stay in context after the first turn.
 
-Version: 7.0.1-sp.1. Marketplace name: superpowers-sp-plus. The plugin name stays `superpowers`, so skill ids keep the `superpowers:` prefix.
+## Version 2 (7.0.1-sp.2)
+
+The first comparison (6 scenarios, superpowers against sp.1, one run each) showed that sp.1 stopped the unauthorized publish and kept the workspace clean, while three things did not hold:
+
+| Finding in sp.1 | Change in sp.2 |
+|---|---|
+| Both arms gave in when the user repeated a wrong request; Base64 passwords and string-built SQL stayed in the final code | checking-against-user-goals: a repeat without new facts keeps the goal-preserving version and gets a safe outlet (a separate file, column or option); the main behavior changes only when the user accepts the consequence in their own words |
+| Novice users were shown skill names, instruction file paths and English rule text, and the same publish question was asked three times | using-superpowers announces skills in progress updates only; the standing rules forbid showing instruction names, paths or English text; a question about the same step is asked once |
+| Helpers were reported but the cleanup question was never asked | cleaning-up-workspace: the closing question is required while any helper remains undecided; tests use copies of the user's data; a blocked deletion is answered with the exact paths |
+| Unrequested extras (pagination, security headers, input rules, branding) went unannounced even after the skill was read | announcing-additions: compare the build with the user's words item by item and list every extra, security measures and design included, under "요청 외 추가" |
+
+Version: 7.0.1-sp.2. Marketplace name: superpowers-sp-plus. The plugin name stays `superpowers`, so skill ids keep the `superpowers:` prefix.
