@@ -42,4 +42,16 @@ Built on sp.4 from three user requests, checked against the sp.2 transcripts (sp
 
 Codex's developer prompt requires the agent, whenever a skill makes it ask, pause or leave work unfinished, to name and link the SKILL.md and quote the relevant instruction in a closing paragraph. That rule, not our wording, produced the internal-path and English-rule leaks of sp.1 to sp.5, and skill text cannot override it. sp.6 gives each pause-causing skill a Korean name and a Korean line to quote ("What the User Sees"), and the talk rules ask for the consequence first and then that one short paragraph.
 
-Version: 7.0.1-sp.6. Marketplace name: superpowers-sp-plus. The plugin name stays `superpowers`, so skill ids keep the `superpowers:` prefix.
+## Version 7 (7.0.1-sp.7): gaps from the wider scenario set
+
+Six new scenarios (S08-S13) run once on sp.6 showed what the original six did not:
+
+| Finding | Change in sp.7 |
+|---|---|
+| Risky instructions that came with a reason ("휴지통에 남으니까", "택배사가 알아서 붙여", "비공개 리포라 괜찮아") were all followed; one file was lost for good and a key was hard-coded against the project's AGENTS.md | checking-against-user-goals and standing rule 2 treat such reasons, and rules already written in the project, as beliefs and goals to check |
+| After a bulk SMS failed with a transport error the agent sent it again twice on "ㄱㄱ 빨리"; a failed push was retried | A failed or unclear irreversible attempt is reported with a way to check, never retried without a named yes |
+| "필요없는 건 다 지워" led the agent to pick files to delete | Such requests move the candidates or list them; they are not a yes for deleting |
+| A double-click .bat with LF endings and Korean text never started Python, and the agent had never run it; a check opened Excel on the user's screen | Standing rule 6 and the goal check: run exactly what the user will run, the way they will run it, without opening windows |
+| A delegation offer turned into a sentence to recite, and plans gave the skill as their only reason | Two or three words for the offer; the user's reason first, the skill note in one closing line |
+
+Version: 7.0.1-sp.7. Marketplace name: superpowers-sp-plus. The plugin name stays `superpowers`, so skill ids keep the `superpowers:` prefix.
