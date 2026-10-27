@@ -35,6 +35,7 @@ Helper files and processes you created in this session belong to superpowers:cle
 | Short yes (네, 응, ㅇㅇ, 좋아요, 해 주세요) right after your question or offer that named this exact step | Yes |
 | "계속", "계속해", "ㄱㄱ", "ㅇㅋ 계속", "진행해" when you had not asked about this step | No |
 | "알아서 해", "편하신 대로", "몰라", even right after your question | No |
+| A deletion whose files you would have to pick ("필요없는 건 다 지워", "옛날 거 정리해", "알아서 지워") | No for deleting. Move the candidates into one folder, or list them so the user picks |
 | A yes to a different question, or an earlier yes for another target or version | No |
 
 ## When There Is No Yes: Hand It Over
@@ -43,16 +44,25 @@ The user wants the result. Without a yes that names the step, give them everythi
 
 1. Do every safe part: build, package, test locally.
 2. Run nothing that creates state outside the workspace: no remote project, no push, no deletion.
-3. In one message, in the user's words: what is ready; what the step would do (who can see it, what cannot be taken back, any cost or account); how to do it themselves, in at most four steps they can copy, with passwords and tokens typed only on their own screen; and that they can hand it to you.
+3. When the goal can be reached without the step, offer that first: phones on the same Wi-Fi instead of publishing, a file they attach themselves instead of sending it for them.
+4. In one message, in the user's words: what is ready; what the step would do (who can see it, what cannot be taken back, any cost or account); how to do it themselves, in at most four steps they can copy, with passwords and tokens typed only on their own screen; and that they can hand it to you with two or three words. Never give them a sentence to recite.
 
 ```
 공개용 파일은 `공개용` 폴더에 준비해 뒀어요. 아직 인터넷에는 올리지 않았어요.
 올리면 주소를 아는 사람은 누구나 볼 수 있고, 퍼진 주소는 되돌리기 어려워요.
 직접 올리려면: ① app.netlify.com/drop 접속·로그인 ② `공개용` 폴더를 화면에 끌어다 놓기 ③ 나온 주소를 친구들에게 보내기
-제가 올려 드릴 수도 있어요. 원하시면 "올려 줘"라고 해 주세요.
+제가 올려 드릴 수도 있어요. 원하시면 "올려 줘"라고만 하세요.
 ```
 
 After that the step is theirs. A reply that does not name it ("계속", "ㅇㅇ 계속", "알아서 해") is no reason to ask or explain again: carry on with the rest of the work, or report that it is done. In the final report the step gets one status line ("인터넷 공개: 아직 안 함 — 위 방법으로 직접 하시거나 '올려 줘'"). Do not raise it in later turns unless the user does.
+
+## When an Attempt Failed or Its Result Is Unknown
+
+A tool error, a closed connection or a permission error does not prove that nothing happened: messages may have gone out, a push may be half done.
+
+1. Do not try the step again on a reply that does not name it again ("계속", "ㄱㄱ 빨리", "알아서 해"). One named yes covers one attempt.
+2. Say what you know: what was attempted, for whom, what the error said, and what is unknown.
+3. Tell them how to check (the service's sending history, the site list, `git status`) and how to do it themselves if it did not happen.
 
 ## How to Talk About It
 
@@ -72,6 +82,8 @@ If you or a tool already created anything outside the workspace (a hosting proje
 - About to quote English rule text to the user
 - About to tell the user what words to say after they already heard the hand-over
 - About to ask about a step you already handed over
+- About to send, push or publish again after an earlier attempt failed or ended without a clear result
+- About to delete files you picked yourself because the user said "필요없는 건"
 
 ## Rationalizations
 
@@ -85,3 +97,5 @@ If you or a tool already created anything outside the workspace (a hosting proje
 | "Asking slows them down" | One reply costs seconds. A public post cannot be taken back. |
 | "They said 알아서, so I must stop and wait" | Hand the step over and keep working on everything else. In testing, agents spent two turns repeating the question and the rule while the user still had no way to publish. |
 | "Quoting the rule is transparent" | An English rule reads as a refusal on a technicality. Say what the step would do and how to take it; if you name the source, quote the Korean line. |
+| "They still want it sent, so I'll try again" | A failed send may have gone out. In testing, the agent sent the same bulk text twice more on "ㄱㄱ 빨리" after a transport error. Report, let them check, and wait for a named yes. |
+| "They said to delete what isn't needed" | That names deleting, not the files. In testing, a file the agent picked this way was lost for good: a script's delete skips the Recycle Bin. Move or list instead. |
