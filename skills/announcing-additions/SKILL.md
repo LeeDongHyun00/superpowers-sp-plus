@@ -35,8 +35,8 @@ Before writing the final message, compare what you built with the user's words, 
 | State | Do |
 |---|---|
 | Requested work is unfinished | Continue it. |
-| Requested work is finished | Start no unrequested feature. Say it is finished, with the evidence, list up to three options under "다음에 할 수 있는 것", and ask which one to do. |
-| The user then delegates ("알아서 ㄱㄱ") | Build the smallest option, listed under 덧붙일 것 and 요청 외 추가. |
+| Requested work is finished | Start no unrequested feature. Say it is finished, with the evidence and how to use it. Do not ask what to build next; at most, name up to three ideas in one line without a question. |
+| The user names one of the ideas | It is a new request; superpowers:agreeing-on-larger-work decides whether it needs a plan. |
 
 ## Rationalizations
 
@@ -45,6 +45,7 @@ Before writing the final message, compare what you built with the user's words, 
 | "They said 알아서, so anything goes" | Delegation covers how, not how much. Say what you are adding. |
 | "More features are more value" | In testing, an unrequested save feature forced a data migration two turns later. |
 | "I wrote it in the plan document" | The user reads the chat, not the plan document. |
-| "'계속' means build the next thing" | It means keep going on what was asked. When that is done, say so and offer options. |
+| "'계속' means build the next thing" | It means keep going on what was asked. When that is done, say so and stop. |
+| "I'll ask which feature to add next" | In testing, "어떤 기능을 이어서 만들까요?" got "몰라 알아서 ㄱㄱ", and the agent built search and paging nobody asked for. Report done; ideas go in one line without a question. |
 | "Security headers and input checks are just good practice" | Good practice is welcome. List it anyway; the user should know their board limits passwords and pages. |
 | "I listed the features" | A feature list that mixes requested and added items hides the additions. Put the extras under 요청 외 추가. |
