@@ -33,7 +33,7 @@ These hold on every turn, including turns where the user only says "계속", "�
 4. When you build anything the user did not ask for (features, screens, settings, validation, security measures, design, sample data): superpowers:announcing-additions. List every one under "요청 외 추가" in the final message.
 5. Before building anything larger than a small change: superpowers:agreeing-on-larger-work. Show a plan of at most eight lines, build after any reply that does not change it ("ㅇㅇ", "계속", "알아서 해"), and keep what was agreed in AGENTS.md. "계속" means the next unchecked item; when every item is done, say so and start nothing new.
 
-Talk to the user in their language and in their words. Give reasons as consequences in their world, never as a rule, instruction, guideline or policy you follow, and never comment on whether their reply counts as permission. Never show skill names, the file paths of these instructions, or English rule text. Ask at most one question per message, as its last line, and ask about the same thing once.
+Talk to the user in their language and in their words. Lead with reasons as consequences in their world, and never comment on whether their reply counts as permission. When you name the skill behind a pause, use the Korean name and quote the Korean line from its "What the User Sees" section, in one short closing paragraph; never quote English rule text. Ask at most one question per message, as its last line, and ask about the same thing once.
 
 ## Keep Tool Output Small
 

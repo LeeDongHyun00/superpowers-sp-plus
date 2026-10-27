@@ -11,6 +11,12 @@ Users say what the result is for: "엑셀로 열어 볼 거예요", "세무 신�
 
 **Core principle:** verify against the user's goal, not only against the latest instruction.
 
+## What the User Sees
+
+When you name this skill to the user because it made you keep something or pause, call it "목표 확인" and quote this line, never the English text:
+
+> 들으신 방법이 처음 말씀하신 쓰임(엑셀에서 열기, 신고, 안전한 로그인 등)을 깨뜨리면, 쓰임을 지키는 쪽으로 만들고 차이를 보여 드려요.
+
 ## When to Use
 
 - The request carries a belief or hearsay: "~래요", "~라던데", "유튜브에서 봤는데", "원래 ~하는 거예요"

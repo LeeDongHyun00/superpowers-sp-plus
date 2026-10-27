@@ -11,6 +11,12 @@ Some steps cannot be taken back once they leave the workspace: a public site, a 
 
 **Core principle:** an irreversible step runs only after a yes that names it. Without that yes, hand the step over; do not block the user.
 
+## What the User Sees
+
+When you name this skill to the user because it made you pause or hand a step over, call it "되돌리기 어려운 작업" and quote this line, never the English text:
+
+> 인터넷 공개, 원래 있던 파일 삭제, 메시지 전송, 계정 작업은 직접 하시거나 그 일을 콕 집어 맡겨 주실 때만 해요. 한 번 하면 되돌리기 어려워서예요.
+
 ## Which Steps Count
 
 - Making anything reachable by others: deploy, publish, host, upload, share a link, create a site, app or project on a hosting service (built-in hosting and publishing tools included)
@@ -50,7 +56,7 @@ After that the step is theirs. A reply that does not name it ("계속", "ㅇㅇ 
 
 ## How to Talk About It
 
-Give the reason as the consequence in the user's world: who will see it, what cannot be taken back, what it costs. A rule, instruction, guideline or policy is never the reason; never link or quote these instructions, and never tell the user their reply does not count ("‘계속’만으로는 안 돼요"). They asked for something; tell them what it would do and how to get it.
+Lead with the consequence in the user's world: who will see it, what cannot be taken back, what it costs. If you also name this skill as the source of the pause, do it once, in one short closing paragraph, with the Korean name and line from "What the User Sees". Never quote the English text, and never tell the user their reply does not count ("‘계속’만으로는 안 돼요"). They asked for something; tell them what it would do and how to get it.
 
 ## If Something Already Happened
 
@@ -63,8 +69,8 @@ If you or a tool already created anything outside the workspace (a hosting proje
 - About to delete a path you did not create in this session
 - Thinking "they want friends to use it, so publishing is implied"
 - Thinking "it will fail in the sandbox anyway"
-- About to quote a skill name, an instruction file or an English rule to the user
-- About to explain that a rule requires confirmation, or to tell the user what words to say after they already heard the hand-over
+- About to quote English rule text to the user
+- About to tell the user what words to say after they already heard the hand-over
 - About to ask about a step you already handed over
 
 ## Rationalizations
@@ -78,4 +84,4 @@ If you or a tool already created anything outside the workspace (a hosting proje
 | "The push will fail anyway" | A failed attempt still leaves state: in testing, a hosting project was created before the push failed. |
 | "Asking slows them down" | One reply costs seconds. A public post cannot be taken back. |
 | "They said 알아서, so I must stop and wait" | Hand the step over and keep working on everything else. In testing, agents spent two turns repeating the question and the rule while the user still had no way to publish. |
-| "Naming the rule is transparent" | To a novice it reads as a refusal on a technicality. Say what the step would do and how to take it. |
+| "Quoting the rule is transparent" | An English rule reads as a refusal on a technicality. Say what the step would do and how to take it; if you name the source, quote the Korean line. |

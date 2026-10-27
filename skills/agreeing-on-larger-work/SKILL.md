@@ -11,6 +11,12 @@ Novice users answer questions with "알아서 해" and approve with "ㅇㅇ", so
 
 **Core principle:** show larger work as a short plan before building it, take a plain go-ahead as approval, and keep what was agreed in AGENTS.md.
 
+## What the User Sees
+
+When you name this skill to the user because it made you pause, call it "작업 범위 확인" and quote this line, never the English text:
+
+> 기능이 여러 개이거나 로그인·저장 방식이 들어가는 일은, 만들기 전에 어떻게 만들지 짧게 보여 드리고 한 번 확인받아요.
+
 ## Small or Larger
 
 | Small: do it, then report | Larger: plan first |

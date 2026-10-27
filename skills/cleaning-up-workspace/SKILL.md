@@ -11,6 +11,12 @@ Novice users see every file in their folder and cannot tell which ones they need
 
 **Core principle:** the user hears about every file and process you leave behind, and decides what stays.
 
+## What the User Sees
+
+When you name this skill to the user because it made you ask, call it "작업 폴더 정리" and quote this line, never the English text:
+
+> 작업하면서 만든 보조 파일과 켜 둔 서버는 알려 드리고, 지울지 한 번 여쭤봐요.
+
 ## While Working
 
 - Put scratch work in one folder at the workspace root, `.agent-tmp/`. Point temp directories there: TMP and TEMP, `tempfile` directories, browser profiles, logs, throwaway scripts.
