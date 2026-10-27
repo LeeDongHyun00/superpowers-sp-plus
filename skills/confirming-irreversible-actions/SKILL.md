@@ -35,7 +35,8 @@ Helper files and processes you created in this session belong to superpowers:cle
 | Short yes (네, 응, ㅇㅇ, 좋아요, 해 주세요) right after your question or offer that named this exact step | Yes |
 | "계속", "계속해", "ㄱㄱ", "ㅇㅋ 계속", "진행해" when you had not asked about this step | No |
 | "알아서 해", "편하신 대로", "몰라", even right after your question | No |
-| A deletion whose files you would have to pick ("필요없는 건 다 지워", "옛날 거 정리해", "알아서 지워") | No for deleting. Move the candidates into one folder, or list them so the user picks |
+| A deletion whose files you would have to pick ("필요없는 건 다 지워", "옛날 거 정리해", "알아서 지워") | No for deleting. List the candidates and the one folder you would move them to; move them after the user's reply |
+| A yes that repeats a belief you have just corrected ("휴지통에서 살리면 돼요, 그냥 지워 주세요") | No. superpowers:checking-against-user-goals keeps the files: say which stay and how they can delete them themselves |
 | A yes to a different question, or an earlier yes for another target or version | No |
 
 ## When There Is No Yes: Hand It Over
@@ -54,7 +55,7 @@ The user wants the result. Without a yes that names the step, give them everythi
 제가 올려 드릴 수도 있어요. 원하시면 "올려 줘"라고만 하세요.
 ```
 
-After that the step is theirs. A reply that does not name it ("계속", "ㅇㅇ 계속", "알아서 해") is no reason to ask or explain again: carry on with the rest of the work, or report that it is done. In the final report the step gets one status line ("인터넷 공개: 아직 안 함 — 위 방법으로 직접 하시거나 '올려 줘'"). Do not raise it in later turns unless the user does.
+After that the step is theirs. A reply that does not name it ("계속", "ㅇㅇ 계속", "알아서 해") is no reason to ask or explain again: carry on with the rest of the work, or report that it is done. In the final report the step gets one status line ("인터넷 공개: 아직 안 함 — 위 방법으로 직접 하시거나 '올려 줘'"), without the steps again. Do not raise it in later turns unless the user does.
 
 ## When an Attempt Failed or Its Result Is Unknown
 
@@ -72,6 +73,10 @@ Lead with the consequence in the user's world: who will see it, what cannot be t
 
 If you or a tool already created anything outside the workspace (a hosting project, a remote branch, a sent message), the final message names what was created, where, and how to remove it. Never call it "blocked" or "not done" when something was created.
 
+## When the User Misses Something
+
+If the user says a file or folder is gone, list everything you moved, renamed or deleted in this session and where each one is now, the Recycle Bin included, and offer to put it back. In testing, a user reported missing files three times while the agent pointed at the folder it had moved them to and never mentioned the document it had sent to the Recycle Bin.
+
 ## Red Flags - STOP
 
 - About to run `git push`, a deploy CLI, or a publish or hosting tool
@@ -84,6 +89,7 @@ If you or a tool already created anything outside the workspace (a hosting proje
 - About to ask about a step you already handed over
 - About to send, push or publish again after an earlier attempt failed or ended without a clear result
 - About to delete files you picked yourself because the user said "필요없는 건"
+- About to delete a file the user had because they repeated a belief you just corrected
 
 ## Rationalizations
 
@@ -98,4 +104,5 @@ If you or a tool already created anything outside the workspace (a hosting proje
 | "They said 알아서, so I must stop and wait" | Hand the step over and keep working on everything else. In testing, agents spent two turns repeating the question and the rule while the user still had no way to publish. |
 | "Quoting the rule is transparent" | An English rule reads as a refusal on a technicality. Say what the step would do and how to take it; if you name the source, quote the Korean line. |
 | "They still want it sent, so I'll try again" | A failed send may have gone out. In testing, the agent sent the same bulk text twice more on "ㄱㄱ 빨리" after a transport error. Report, let them check, and wait for a named yes. |
-| "They said to delete what isn't needed" | That names deleting, not the files. In testing, a file the agent picked this way was lost for good: a script's delete skips the Recycle Bin. Move or list instead. |
+| "They said to delete what isn't needed" | That names deleting, not the files. In testing, a file the agent picked this way was lost for good: a script's delete skips the Recycle Bin. List first, then move. |
+| "They insisted after my warning, so it is their call" | Insisting with the same belief adds no facts. In testing, the agent warned, then deleted the user's file on "휴지통에서 살리면 돼요", and the user kept asking where their files went. Keep the files and tell them how to delete them themselves. |
