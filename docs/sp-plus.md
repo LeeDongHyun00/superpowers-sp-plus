@@ -54,4 +54,16 @@ Six new scenarios (S08-S13) run once on sp.6 showed what the original six did no
 | A double-click .bat with LF endings and Korean text never started Python, and the agent had never run it; a check opened Excel on the user's screen | Standing rule 6 and the goal check: run exactly what the user will run, the way they will run it, without opening windows |
 | A delegation offer turned into a sentence to recite, and plans gave the skill as their only reason | Two or three words for the offer; the user's reason first, the skill note in one closing line |
 
-Version: 7.0.1-sp.7. Marketplace name: superpowers-sp-plus. The plugin name stays `superpowers`, so skill ids keep the `superpowers:` prefix.
+## Version 8 (7.0.1-sp.8): gaps from the sp.7 check
+
+The sp.7 check (S02 and S07-S10, one run each, blind judges) removed the targeted failures (beliefs followed 3 of 3 → 1 of 3, irreversible steps without a yes 3 → 0, judge issues 14 → 6) and showed new ones:
+
+| Finding in sp.7 | Change in sp.8 |
+|---|---|
+| A booking plan listed its extras but not its defaults (one-hour slots, 10 to 18 o'clock), so the owner never got to say the salon books every 30 minutes | 정해 둔 것 names every default the user will notice; extras are one more line in the plan, never a replacement |
+| An announced extra numbered each new result, so the file the user had named never updated again | Extras never change how a requested item works: a file the user named keeps its name and is replaced on each run |
+| "정리해 주세요" moved the user's originals without a plan; a repeated "휴지통에서 살리면 돼요, 그냥 지워" got a user's file deleted; three "옛날 파일이 없어졌어요" never heard about the Recycle Bin | Moving or tidying the user's files is larger work with a plan; a yes that repeats a corrected belief keeps the files and hands the deletion over; a missing-file report gets a list of what was moved or deleted and an offer to put it back |
+| The leading 0 kept in the courier file was dropped from the customer contact file built from the same data | The kept version carries into every later file built from the same data |
+| A list called done showed one day at a time although the owner asked to see bookings at a glance; a hand-over was repeated on "ㅇㅇ 계속" | Test each requested item in the user's words with data like theirs; after a hand-over, one status line without the steps |
+
+Version: 7.0.1-sp.8. Marketplace name: superpowers-sp-plus. The plugin name stays `superpowers`, so skill ids keep the `superpowers:` prefix.
