@@ -26,4 +26,16 @@ The first comparison (6 scenarios, superpowers against sp.1, one run each) showe
 
 The lean experiment (sp.3, six scenarios times three runs per arm) cut credits by only 5%: quiet test runs and output caps cut re-sent tool output by 68%, while reading one skill per step doubled skill reads and outweighed the slimmer skills. sp.4 keeps sp.2 and adds only the output rules ("Keep Tool Output Small" in using-superpowers) and, in the novice profile, `tool_output_token_limit = 6000`. The lean work stays on branch sp-plus-lean.
 
-Version: 7.0.1-sp.4. Marketplace name: superpowers-sp-plus. The plugin name stays `superpowers`, so skill ids keep the `superpowers:` prefix.
+## Version 5 (7.0.1-sp.5): plan first, work contract, hand-over
+
+Built on sp.4 from three user requests, checked against the sp.2 transcripts (spplus-3, 18 sessions) and Codex probes:
+
+| Finding | Change in sp.5 |
+|---|---|
+| 17 of 18 sessions built on the first turn without showing a plan; brainstorming drops its design gate once the user opts out of questions, and "알아서 해 줘" counts as opting out | New skill agreeing-on-larger-work: small work is done directly, larger work gets an eight-line plan with the agent's defaults, and any reply that does not change it is the go-ahead. brainstorming's opt-out now skips the questions only |
+| Codex re-sends the workspace AGENTS.md whenever it changes and after compaction, while compaction replaces the agent's messages and tool output (skill bodies included) with an opaque summary. With compaction forced 9 to 12 times, the agent lost all 16 details it had chosen and the user had approved in two of three runs; with the details in AGENTS.md it kept all 16 in three of three | The approved plan becomes a short work contract in AGENTS.md (goal, plan items, decisions, user decisions, one fixed line that irreversible steps are the user's). It never holds permissions or secrets. using-superpowers asks to be read again after a summary |
+| In the publishing scenario the agent asked again on "ㅇㅇ 계속" and on "알아서 해줘" stopped with a link to its instruction file and a sentence to recite (3 of 3 runs); 9 of 10 internal-path leaks came while justifying a held step | confirming-irreversible-actions hands the step over once (what is ready, what it would do, how to do it oneself, how to hand it to the agent) and keeps working; reasons are consequences, never rules |
+| The goal check asked users to recite consent sentences, and its "separate file or option" outlet became a copy of the VAT program that received the next feature (2 of 3 runs) | checking-against-user-goals keeps the goal version, shows the difference once and says where the user can change it; no copies |
+| After finished work, "계속" led to "어떤 기능을 이어서 만들까요?" and "알아서 ㄱㄱ" to unrequested search and paging | announcing-additions reports done work and asks nothing about next features |
+
+Version: 7.0.1-sp.5. Marketplace name: superpowers-sp-plus. The plugin name stays `superpowers`, so skill ids keep the `superpowers:` prefix.
