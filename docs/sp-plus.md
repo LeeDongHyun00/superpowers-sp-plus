@@ -22,4 +22,8 @@ The first comparison (6 scenarios, superpowers against sp.1, one run each) showe
 | Helpers were reported but the cleanup question was never asked | cleaning-up-workspace: the closing question is required while any helper remains undecided; tests use copies of the user's data; a blocked deletion is answered with the exact paths |
 | Unrequested extras (pagination, security headers, input rules, branding) went unannounced even after the skill was read | announcing-additions: compare the build with the user's words item by item and list every extra, security measures and design included, under "요청 외 추가" |
 
-Version: 7.0.1-sp.2. Marketplace name: superpowers-sp-plus. The plugin name stays `superpowers`, so skill ids keep the `superpowers:` prefix.
+## Version 4 (7.0.1-sp.4): sp.2 plus tool-output discipline
+
+The lean experiment (sp.3, six scenarios times three runs per arm) cut credits by only 5%: quiet test runs and output caps cut re-sent tool output by 68%, while reading one skill per step doubled skill reads and outweighed the slimmer skills. sp.4 keeps sp.2 and adds only the output rules ("Keep Tool Output Small" in using-superpowers) and, in the novice profile, `tool_output_token_limit = 6000`. The lean work stays on branch sp-plus-lean.
+
+Version: 7.0.1-sp.4. Marketplace name: superpowers-sp-plus. The plugin name stays `superpowers`, so skill ids keep the `superpowers:` prefix.
