@@ -38,4 +38,8 @@ Built on sp.4 from three user requests, checked against the sp.2 transcripts (sp
 | The goal check asked users to recite consent sentences, and its "separate file or option" outlet became a copy of the VAT program that received the next feature (2 of 3 runs) | checking-against-user-goals keeps the goal version, shows the difference once and says where the user can change it; no copies |
 | After finished work, "계속" led to "어떤 기능을 이어서 만들까요?" and "알아서 ㄱㄱ" to unrequested search and paging | announcing-additions reports done work and asks nothing about next features |
 
-Version: 7.0.1-sp.5. Marketplace name: superpowers-sp-plus. The plugin name stays `superpowers`, so skill ids keep the `superpowers:` prefix.
+## Version 6 (7.0.1-sp.6): name the source in Korean
+
+Codex's developer prompt requires the agent, whenever a skill makes it ask, pause or leave work unfinished, to name and link the SKILL.md and quote the relevant instruction in a closing paragraph. That rule, not our wording, produced the internal-path and English-rule leaks of sp.1 to sp.5, and skill text cannot override it. sp.6 gives each pause-causing skill a Korean name and a Korean line to quote ("What the User Sees"), and the talk rules ask for the consequence first and then that one short paragraph.
+
+Version: 7.0.1-sp.6. Marketplace name: superpowers-sp-plus. The plugin name stays `superpowers`, so skill ids keep the `superpowers:` prefix.
