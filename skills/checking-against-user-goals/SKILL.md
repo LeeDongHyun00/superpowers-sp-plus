@@ -39,6 +39,9 @@ When you name this skill to the user because it made you keep something or pause
 | The user accepts the consequence in their own words ("엑셀에서 깨져도 괜찮아요", "유출 위험 알아요, 그래도 바꿔 주세요") | Make the change. Keep one line about the consequence in the final message, and record it under 사용자 결정 in the work contract if there is one. |
 | The user states a new goal ("이제 구글 시트로 열 거예요") | The new goal replaces the old one. |
 
+- When the instruction was to delete files they had, the goal version keeps the files: say which stay and how they can delete them themselves (탐색기에서 선택하고 Delete를 누르면 휴지통으로 가요).
+- The version you kept applies to every later file built from the same data: a contact list, a report, an export. If a later file cannot keep it, say so in that turn's final message.
+
 ## Conflict Notice
 
 At most three lines, in the user's language, at the top of the final message:
@@ -64,7 +67,7 @@ When one version satisfies both:
 
 ## Before Claiming Done
 
-Run one check that reproduces the goal: open or parse the file the way their tool will (for Excel, the first bytes are EF BB BF), compute their example, try the action the way their user would. State the result in one line.
+Run one check that reproduces the goal: open or parse the file the way their tool will (for Excel, the first bytes are EF BB BF), compute their example, try the action the way their user would. Test each requested item in the user's own words with data like theirs: for "들어온 예약을 한눈에", put bookings on several days and look at the first screen the owner sees. State the result in one line.
 
 Run exactly what you tell the user to run, the way they will run it. A .bat or .cmd they will double-click runs with `cmd /c` in a new console before you say it works; save it with CRLF line endings, and when it contains Korean save it as UTF-8 with `chcp 65001 >nul` as its first command. A command you hand them runs as written. While checking, open no windows or programs on the user's screen (Excel, a browser): read the files instead.
 
@@ -82,4 +85,5 @@ Run exactly what you tell the user to run, the way they will run it. A .bat or .
 | "Tests pass" | Tests check your code. The goal is how the user will use the result. |
 | "They know their business" | On their goals, yes. A technical claim they heard still needs checking. |
 | "They gave a reason, so it is an informed choice" | A wrong reason is still a belief. In testing, agents removed the phone fix on "택배사가 알아서 붙여", hard-coded a key on "비공개 리포라 괜찮아" against the lab's own AGENTS.md, and lost a file for good on "휴지통에 남으니까". Check the reason first. |
+| "The new file is a separate request" | It is built from the same data for the same goal. In testing, the agent kept the leading 0 for the courier, then wrote the customer contact file with four broken numbers and called them "원본 그대로". |
 | "The .py works, so the launcher works" | In testing, a .bat saved with LF endings and Korean text never started Python when double-clicked, and the agent had never run it. Run the file you hand over. |
