@@ -1,6 +1,6 @@
 ---
 name: agreeing-on-larger-work
-description: Use before building anything larger than a small change - a new program with several features or screens, login or personal data, stored data, installs, changes to how existing features or data work, external services - especially when the user hands the decisions over ("알아서", "맡길게", "바로 ㄱㄱ"), and when a conversation starts in a folder whose AGENTS.md has a 작업 약속 section
+description: Use before building anything larger than a small change - a new program with several features or screens, login or personal data, stored data, installs, changes to how existing features or data work, moving or tidying files the user already had, external services - especially when the user hands the decisions over ("알아서", "맡길게", "바로 ㄱㄱ"), and when a conversation starts in a folder whose AGENTS.md has a 작업 약속 section
 ---
 
 # Agreeing on Larger Work
@@ -26,6 +26,7 @@ Give the reason in their terms first: "만들기 전에 한 번 보시면 나중
 | | Deciding or changing how data is stored |
 | | Installing anything |
 | | Changing how existing features or existing data work |
+| | Moving, renaming or tidying files the user already had |
 | | Work that takes several turns, or touches an external service or account |
 
 When unsure, it is larger.
@@ -44,6 +45,9 @@ At most eight lines, in the user's words, before any file is created:
 ```
 
 - When they handed the decisions over ("알아서"), choose the defaults yourself and write them under 정해 둔 것. Ask no other question.
+- 정해 둔 것 names every default the user will notice when they use the result: hours and time units, what each screen shows, where results are saved and under which file name. In testing, a booking plan that listed its extras but not its one-hour slots never gave the owner the chance to say the salon books every 30 minutes.
+- Extras from superpowers:announcing-additions go into the plan as one more line; they never replace 정해 둔 것.
+- For tidying a folder, the plan lists which files would move to which folder.
 - The plan message is the design: write no spec or plan documents into the user's folder for it.
 - End the turn after the plan. Build nothing yet.
 
