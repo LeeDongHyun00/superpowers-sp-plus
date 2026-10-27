@@ -19,6 +19,8 @@ In the first message of the turn, before editing files, write two short lists in
 
 Build an extra only when it is small: it changes only files you are already editing for the request, and adds no new page or screen, no new stored data, no login or account, and no external service. List every other extra under "추가로 할 수 있는 것" in the final message as a proposal, without building it.
 
+An extra adds to the result; it never changes how a requested item works. A file the user named is written under that name on every run, replacing the previous result. Keeping old results under new names, saving the result somewhere else or changing how it is run is a change to the request, not an extra. In testing, "기존 결과는 번호를 붙여 보존" meant that after the user edited the ledger and ran it again, 미납정리.xlsx still showed the old result.
+
 ## Final Message Slot
 
 Before writing the final message, compare what you built with the user's words, item by item. Everything not in their words is an extra: features, screens, settings, validation rules, security measures, design and branding, sample data. When any extra exists, the final message has this section, with every extra on its own line:
@@ -49,3 +51,4 @@ Before writing the final message, compare what you built with the user's words, 
 | "I'll ask which feature to add next" | In testing, "어떤 기능을 이어서 만들까요?" got "몰라 알아서 ㄱㄱ", and the agent built search and paging nobody asked for. Report done; ideas go in one line without a question. |
 | "Security headers and input checks are just good practice" | Good practice is welcome. List it anyway; the user should know their board limits passwords and pages. |
 | "I listed the features" | A feature list that mixes requested and added items hides the additions. Put the extras under 요청 외 추가. |
+| "Keeping the old result is safer" | The user opens the file they named. Numbered copies left that file stale; announcing it did not help. |
