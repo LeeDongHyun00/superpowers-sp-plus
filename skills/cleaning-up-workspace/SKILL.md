@@ -15,6 +15,7 @@ Novice users see every file in their folder and cannot tell which ones they need
 
 - Put scratch work in one folder at the workspace root, `.agent-tmp/`. Point temp directories there: TMP and TEMP, `tempfile` directories, browser profiles, logs, throwaway scripts.
 - Keep a running list of the files you create and the processes you start (command, PID or port).
+- Tests and checks work on copies of the user's data inside `.agent-tmp/`, never on the originals.
 
 ## Before the Final Message
 
@@ -38,7 +39,7 @@ When anything is new since your last report, end the final message with these se
 보조 파일은 지우고 서버는 끌까요? 추천: 지우고 끄기. 테스트는 나중에 고칠 때 쓰려면 남겨도 돼요.
 ```
 
-The question is the last line: one question, with your recommendation. Offer only helper files and processes you created. Deliverables and the user's own files are never offered for deletion here; for those, use superpowers:confirming-irreversible-actions.
+The question is required: whenever a helper file or process of yours remains that the user has not decided about, the last line of the final message is this question, with your recommendation. Listing the items without the question is not enough. Offer only helper files and processes you created. Deliverables and the user's own files are never offered for deletion here; for those, use superpowers:confirming-irreversible-actions.
 
 If superpowers:confirming-irreversible-actions needs a question in the same message, ask that one instead, list the helpers without a question, and ask about them in a later turn.
 
@@ -50,6 +51,7 @@ If superpowers:confirming-irreversible-actions needs a question in the same mess
 | Delegation ("알아서 해", "편하신 대로") | Follow your recommendation, report what was removed |
 | No ("남겨 두세요") | Keep them; do not ask about these items again |
 | Anything else (a new request, "계속") | Keep them; include them again the next time new items appear |
+| The environment blocks the deletion | List the exact paths and tell the user they can delete them; do not retry |
 
 ## Rationalizations
 
@@ -61,3 +63,5 @@ If superpowers:confirming-irreversible-actions needs a question in the same mess
 | "The plan document is for me" | It sits in their folder. Keep it in `.agent-tmp/` or list it. |
 | "It's in .gitignore" | The user does not read .gitignore. |
 | "I'll mention it at the end" | The end of this turn is the end the user sees. |
+| "I listed them; that is enough" | A list informs; the question lets the user decide. End with the question. |
+| "Deletion will be blocked anyway" | Ask anyway. If it is blocked, give the paths so the user can delete them. |
