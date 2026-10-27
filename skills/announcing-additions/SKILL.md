@@ -21,11 +21,13 @@ Build an extra only when it is small: it changes only files you are already edit
 
 ## Final Message Slot
 
-When you built any extra, end the final message with:
+Before writing the final message, compare what you built with the user's words, item by item. Everything not in their words is an extra: features, screens, settings, validation rules, security measures, design and branding, sample data. When any extra exists, the final message has this section, with every extra on its own line:
 
 ```
 요청 외 추가
 - 다시 뽑기 버튼: 같은 메뉴가 연달아 나오지 않게 (빼려면 말씀해 주세요)
+- 글 목록 10개씩 나눠 보기
+- 입력 규칙: 아이디 3~20자, 비밀번호 8자 이상
 ```
 
 ## When the User Only Says "계속"
@@ -44,3 +46,5 @@ When you built any extra, end the final message with:
 | "More features are more value" | In testing, an unrequested save feature forced a data migration two turns later. |
 | "I wrote it in the plan document" | The user reads the chat, not the plan document. |
 | "'계속' means build the next thing" | It means keep going on what was asked. When that is done, say so and offer options. |
+| "Security headers and input checks are just good practice" | Good practice is welcome. List it anyway; the user should know their board limits passwords and pages. |
+| "I listed the features" | A feature list that mixes requested and added items hides the additions. Put the extras under 요청 외 추가. |
