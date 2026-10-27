@@ -1,6 +1,6 @@
 ---
 name: checking-against-user-goals
-description: Use when the user asks for a change because of something they heard or believe ("~래요", "~라던데", "유튜브에서 봤는데", "I read that"), when a new instruction could break how they said they will use the result (opening it in Excel, filing taxes, sharing with friends, logging in safely), and before saying requested work is done
+description: Use when the user asks for a change because of something they heard or believe ("~래요", "~라던데", "유튜브에서 봤는데", "I read that"), when they give a reason that makes a risky change sound safe ("휴지통에 남으니까", "비공개라 괜찮아요", "알아서 붙여 줘요"), when a new instruction could break how they said they will use the result (opening it in Excel, filing taxes, sharing with friends, logging in safely) or a rule already written in the project, and before saying requested work is done
 ---
 
 # Checking Against User Goals
@@ -20,13 +20,15 @@ When you name this skill to the user because it made you keep something or pause
 ## When to Use
 
 - The request carries a belief or hearsay: "~래요", "~라던데", "유튜브에서 봤는데", "원래 ~하는 거예요"
-- A new instruction changes encoding, format, rounding, storage, security, timing or who can see the result
+- The user gives a reason that makes a risky change sound safe: "휴지통에 남으니까 지워도 돼요", "택배사가 알아서 붙여요", "비공개 리포라 괜찮아요", "작은 사이트라 해킹 안 당해요". The reason is the belief to check.
+- The change would break a rule already written in the project (AGENTS.md, README, the team's rules). That rule is one of the user's goals.
+- A new instruction changes encoding, format, rounding, storage, deletion, secrets, security, timing or who can see the result
 - Before saying requested work is done
 
 ## The Check
 
 1. Find the goals: re-read the conversation for how the result will be used, by whom, and for what.
-2. Test the belief behind the instruction where you can: write the file and inspect it, compute the user's own example, run the case.
+2. Test the belief behind the instruction where you can: write the file and inspect it, compute the user's own example, run the case. Common ones: a script's delete does not go to the Recycle Bin; couriers and text services need the leading 0 of a phone number; a key in a committed file stays in the history even in a private repository.
 3. Pick the outcome:
 
 | Situation | Do |
@@ -64,6 +66,8 @@ When one version satisfies both:
 
 Run one check that reproduces the goal: open or parse the file the way their tool will (for Excel, the first bytes are EF BB BF), compute their example, try the action the way their user would. State the result in one line.
 
+Run exactly what you tell the user to run, the way they will run it. A .bat or .cmd they will double-click runs with `cmd /c` in a new console before you say it works; save it with CRLF line endings, and when it contains Korean save it as UTF-8 with `chcp 65001 >nul` as its first command. A command you hand them runs as written. While checking, open no windows or programs on the user's screen (Excel, a browser): read the files instead.
+
 ## Rationalizations
 
 | Excuse | Reality |
@@ -77,3 +81,5 @@ Run one check that reproduces the goal: open or parse the file the way their too
 | "Correcting the user is rude" | One short notice with a concrete consequence is help. |
 | "Tests pass" | Tests check your code. The goal is how the user will use the result. |
 | "They know their business" | On their goals, yes. A technical claim they heard still needs checking. |
+| "They gave a reason, so it is an informed choice" | A wrong reason is still a belief. In testing, agents removed the phone fix on "택배사가 알아서 붙여", hard-coded a key on "비공개 리포라 괜찮아" against the lab's own AGENTS.md, and lost a file for good on "휴지통에 남으니까". Check the reason first. |
+| "The .py works, so the launcher works" | In testing, a .bat saved with LF endings and Korean text never started Python when double-clicked, and the agent had never run it. Run the file you hand over. |
