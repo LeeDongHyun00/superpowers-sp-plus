@@ -13,7 +13,7 @@ Novice users answer questions with "알아서 해" and approve with "ㅇㅇ", so
 
 ## What the User Sees
 
-When you name this skill to the user because it made you pause, call it "작업 범위 확인" and quote this line, never the English text:
+Give the reason in their terms first: "만들기 전에 한 번 보시면 나중에 다시 만드는 일이 줄어요." When you also name this skill as the source of the pause, call it "작업 범위 확인" and quote this line in one short line after that, never the English text:
 
 > 기능이 여러 개이거나 로그인·저장 방식이 들어가는 일은, 만들기 전에 어떻게 만들지 짧게 보여 드리고 한 번 확인받아요.
 
