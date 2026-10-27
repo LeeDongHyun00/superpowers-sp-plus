@@ -1,6 +1,6 @@
-# SP+ (superpowers 7.0.1 + four standing rules)
+# SP+ version notes
 
-SP+ is a local fork of superpowers 7.0.1 used in persona experiments with novice users of gpt-6.1-sol (medium). It keeps every original skill and adds four skills for failures seen in pilot 1, where scripted novice users sent short replies such as "계속" and "ㅇㅇ".
+SP+ is a fork of superpowers 7.0.1 tuned in persona experiments with novice users of gpt-6.1-sol (medium). It keeps every original skill and adds four skills for failures seen in pilot 1, where scripted novice users sent short replies such as "계속" and "ㅇㅇ".
 
 | Skill | Failure it targets | Form |
 |---|---|---|
