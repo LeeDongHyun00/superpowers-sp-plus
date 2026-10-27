@@ -93,6 +93,15 @@ codex plugin marketplace remove superpowers-sp-plus
 
 ## Troubleshooting
 
+- **`codex` is not recognized (Windows).** The Codex CLI is not on your PATH. If you use the Codex app, it keeps its own copy of the CLI under `%LOCALAPPDATA%\OpenAI\Codex\bin`. In PowerShell, find it once and run the install commands through it:
+
+  ```powershell
+  $codex = (Get-ChildItem "$env:LOCALAPPDATA\OpenAI\Codex\bin" -Recurse -Filter codex.exe | Sort-Object LastWriteTime | Select-Object -Last 1).FullName
+  & $codex plugin marketplace add LeeDongHyun00/superpowers-sp-plus
+  & $codex plugin add superpowers@superpowers-sp-plus
+  ```
+
+  The other commands in this README work the same way: replace `codex` with `& $codex`.
 - **`Filename too long` during `marketplace add` on Windows.** Git could not write into the Codex home folder because its path is too long. This happens only when `CODEX_HOME` points to a deeply nested folder; the default `%USERPROFILE%\.codex` works.
 - **The skills do not show up.** Start a new Codex session: a running session keeps the skills it started with. Then check that `codex plugin list` shows the plugin as `installed, enabled`.
 
