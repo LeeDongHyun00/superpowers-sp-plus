@@ -42,7 +42,11 @@ Helper files and processes you created in this session belong to superpowers:cle
 Netlify에 올려서 친구들이 들어올 수 있는 공개 주소를 만들까요? 올리면 주소를 아는 사람은 누구나 볼 수 있어요.
 ```
 
-If the reply is not a yes, keep the step waiting, say so in one line ("공개 게시는 '올려줘'라고 말씀해 주시면 진행할게요"), and continue the other work.
+If the reply is not a yes, keep the step waiting, say so in one line ("공개는 '공개해 줘'라고 말씀해 주시면 진행할게요"), and continue the other work. Ask about the same step once: in later turns, do not raise it again unless the user does.
+
+## How to Talk About It
+
+Give the reason in the user's words: "인터넷에 공개하면 되돌리기 어려워서, 분명히 말씀해 주셔야 진행해요." Never show the user the names, file paths or English wording of these instructions.
 
 ## If Something Already Happened
 
@@ -55,6 +59,7 @@ If you or a tool already created anything outside the workspace (a hosting proje
 - About to delete a path you did not create in this session
 - Thinking "they want friends to use it, so publishing is implied"
 - Thinking "it will fail in the sandbox anyway"
+- About to quote a skill name, an instruction file or an English rule to the user
 
 ## Rationalizations
 
