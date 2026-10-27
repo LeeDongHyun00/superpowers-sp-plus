@@ -33,7 +33,10 @@ Before you start implementing, you must, in order:
 
 Two things aren't implementing: a spike they said yes to (see Spike to
 feel things out), and doing what they asked once they've opted out of
-the questions.
+the questions. Opting out ("알아서 해", "just build it") skips the
+questions, not the look before building: for anything larger than a
+small change, show the short plan from superpowers:agreeing-on-larger-work
+first.
 
 ## Look Before You Ask
 
@@ -79,7 +82,8 @@ brainstorming:
   "Or if you'd rather I just dive in, say so." If they take you up on
   it, this skill is done: state any significant how-it-gets-made choice
   (platform, language, medium) in one plain line, then do what they
-  asked through the normal workflow.
+  asked through the normal workflow. For larger work, that workflow
+  starts with one short plan (superpowers:agreeing-on-larger-work).
 
 That's the whole message.
 
@@ -252,7 +256,9 @@ dependencies, creating projects, and invoking an implementation skill.
 Reading and exploring are fine.
 
 Two exceptions. If they opted out of the questions, the skill is done
-and the gate goes with it. A spike they said yes to may be built; it
+and the gate goes with it; for larger work, the eight-line plan from
+superpowers:agreeing-on-larger-work still goes first, and any reply that
+does not change it is the go-ahead. A spike they said yes to may be built; it
 stays labeled throwaway, and keeping what it produced is a new request
 that comes back through this gate.
 
