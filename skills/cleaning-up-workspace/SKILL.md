@@ -16,6 +16,7 @@ Novice users see every file in their folder and cannot tell which ones they need
 - Put scratch work in one folder at the workspace root, `.agent-tmp/`. Point temp directories there: TMP and TEMP, `tempfile` directories, browser profiles, logs, throwaway scripts.
 - Keep a running list of the files you create and the processes you start (command, PID or port).
 - Tests and checks work on copies of the user's data inside `.agent-tmp/`, never on the originals.
+- The work contract in AGENTS.md (superpowers:agreeing-on-larger-work) is not a helper. List it under 새로 만든 파일 the first time and never offer it for removal.
 
 ## Before the Final Message
 
