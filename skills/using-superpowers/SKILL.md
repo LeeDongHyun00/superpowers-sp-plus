@@ -34,6 +34,13 @@ These hold on every turn, including turns where the user only says "계속", "�
 
 Talk to the user in their language and in their words: never show skill names, the file paths of these instructions, or English rule text. Ask at most one question per message, as its last line, and ask about the same thing once.
 
+## Keep Tool Output Small
+
+Everything a command prints stays in this conversation and is sent again with every later step.
+
+1. Run tests and tools quietly and show failures only (`pytest -q`, `python -m unittest` without `-v`, `npm test --silent`). Cap long output (`Select-Object -First 40`, `Get-Content -Tail 40`).
+2. Read only the part of a file you need (`Select-String -Context`, line ranges). Never print a file you just wrote.
+
 ## Skill Priority
 
 When multiple skills apply, process skills come first — they set the approach, then implementation skills (frontend-design, etc.) carry it out. Brainstorming and systematic-debugging are Superpowers' most common process skills, but the rule holds for any of them.
