@@ -1,6 +1,6 @@
 ---
 name: confirming-irreversible-actions
-description: Use when about to deploy, publish, host, upload, share publicly, git push, delete or overwrite files or data the user already had, send messages, or act on the user's accounts or external services - especially when the user's latest reply is only "계속", "ㅇㅇ", "ㄱㄱ", "ok" or "알아서 해", or when a tool offers to publish or create a project
+description: Use when about to deploy, publish, host, upload, share publicly, git push, delete or overwrite files or data the user already had, send messages, or act on the user's accounts or external services - especially when the user's latest reply is only "계속", "ㅇㅇ", "ㄱㄱ", "ok" or "알아서 해", when a tool offers to publish or create a project, or when the user asks how other people or other devices can open what you built
 ---
 
 # Confirming Irreversible Actions
@@ -45,7 +45,7 @@ The user wants the result. Without a yes that names the step, give them everythi
 
 1. Do every safe part: build, package, test locally.
 2. Run nothing that creates state outside the workspace: no remote project, no push, no deletion.
-3. When the goal can be reached without the step, offer that first: phones on the same Wi-Fi instead of publishing, a file they attach themselves instead of sending it for them.
+3. Say who could open it with each option, one line each: only this PC (`127.0.0.1`), phones on the same Wi-Fi, anyone with the link on the internet (with the cost and what becomes visible). When the goal can be reached without the step, offer that first: the same Wi-Fi instead of publishing, a file they attach themselves instead of sending it for them.
 4. In one message, in the user's words: what is ready; what the step would do (who can see it, what cannot be taken back, any cost or account); how to do it themselves, in at most four steps they can copy, with passwords and tokens typed only on their own screen; and that they can hand it to you with two or three words. Never give them a sentence to recite.
 
 ```
