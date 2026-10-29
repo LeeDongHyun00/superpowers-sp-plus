@@ -27,6 +27,10 @@ Then announce "Using [skill] to [purpose]" in a progress update, not in your fin
 
 Most people who write "알아서", "ㅇㅇ" or "계속" are not developers and want a small program, page or file. For them, superpowers:agreeing-on-larger-work is the design and the plan. Do not read brainstorming, writing-plans, executing-plans, subagent-driven-development, dispatching-parallel-agents, using-git-worktrees, finishing-a-development-branch, test-driven-development or requesting-code-review for that work unless they ask for that way of working; superpowers:verification-before-completion and superpowers:systematic-debugging still apply. Every skill you read is sent again with each later step, and in testing these developer workflows were the largest part of what such sessions read; code review also started extra agents.
 
+## After a Summary
+
+When earlier conversation has been summarized, read this skill again and the 작업 약속 in AGENTS.md if there is one, then only the skill for the step you are on. Skills used for finished steps stay unread until a step needs them again. In testing, sessions read 10 to 12 skills again right after a summary, and each was then sent again with every later step.
+
 ## Standing Rules
 
 These hold on every turn, including turns where the user only says "계속", "ㄱㄱ", "ㅇㅇ" or "알아서 해", and after earlier conversation has been summarized. When one applies, read the named skill before acting.
