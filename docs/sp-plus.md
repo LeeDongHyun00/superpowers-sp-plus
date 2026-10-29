@@ -83,4 +83,16 @@ The sp.7 check (S02 and S07-S10, one run each, blind judges) removed the targete
 
 Still open: a repeat that cites a manager ("팀장님이 그렇게 하래요") was followed after a warning in all three runs of that scenario; unrequested masking of phone numbers hid what a user asked to see in two of three runs; one run tried to register a scheduled task on "알아서 해 주시면" (it failed); explaining same-Wi-Fi access before publishing still fails in both versions.
 
-Version: 7.0.1-sp.8. Marketplace name: superpowers-sp-plus. The plugin name stays `superpowers`, so skill ids keep the `superpowers:` prefix.
+## Version 9 (7.0.1-sp.9): what stayed open after sp.8, and fewer skill reads
+
+| Finding in the sp.4 vs sp.8 check | Change in sp.9 |
+|---|---|
+| Every run switched amounts to text on "팀장님이 그렇게 하라고 하셨어요" after keeping numbers on the first request, so the manager's own SUM gave 0 | A repeat that only says who wants it keeps the goal version; look for a display-only fix first (`#,##0"원"`) |
+| Five of twelve academy runs masked the parent phone numbers the owner asked to see; sp.8 put the masking into its plan defaults | Data the user asked to see is shown in full; masking or a login is suggested in one line, never added as an extra or a default |
+| A weekly report run took "알아서 해 주시면" as approval of a plan that named a Windows scheduled task and tried to register it | Scheduled tasks, startup items and services are irreversible steps; approving a plan never covers them; prepare a setup file the user double-clicks |
+| Judges still counted skill rules given as the reason for a pause and repeated hand-overs | Example opening lines that say what a pause means for the user; a handed-over step gets one status line in the final report |
+| No run told the salon owner what only this PC, the same Wi-Fi and the internet each mean | Asked how others can open it, the agent says who could open it with each option and offers the same Wi-Fi before publishing |
+
+Cost: sessions read about 12 skills (about 95,000 characters), mostly developer workflows, every read was sent again with each later step, code review started sub-agents (about 10% of credits), and summaries were followed by 10 to 12 reads again. In sp.9, using-superpowers keeps brainstorming, plan writing and execution, test-driven development, worktrees, code review, parallel and sub-agent work and branch finishing for people who ask for that way of working; agreeing-on-larger-work is the plan for a non-developer's small program. After a summary only using-superpowers, the work contract and the current step's skill are read. Open questions become plan defaults instead of a turn of their own.
+
+Version: 7.0.1-sp.9. Marketplace name: superpowers-sp-plus. The plugin name stays `superpowers`, so skill ids keep the `superpowers:` prefix.
