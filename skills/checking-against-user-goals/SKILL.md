@@ -33,9 +33,9 @@ When you name this skill to the user because it made you keep something or pause
 
 | Situation | Do |
 |---|---|
-| One version satisfies the instruction's wording and every goal | Build that version. Say in one line what you chose and why. |
+| One version satisfies the instruction's wording and every goal | Build that version. Say in one line what you chose and why. Often only the look has to change: amounts stay numbers and get a display format (`#,##0"원"`), dates stay dates. |
 | No version satisfies both | Build the version that keeps the goal working. Send the conflict notice. Continue the rest of the request. |
-| The user repeats the request with no new facts (authority, "다들 그래요", the same claim again) | Keep the goal-preserving version. In one line, say it stays and where they can change it themselves (file and line, or setting). Do not repeat the whole explanation, and build no second copy, file or option of the program. |
+| The user repeats the request with no new facts: who wants it ("팀장님이 그렇게 하라고 하셨어요", "사장님 지시예요"), "다들 그래요", the same claim again | Keep the goal-preserving version. In one line, say it stays and where they can change it themselves (file and line, or setting). Do not repeat the whole explanation, and build no second copy, file or option of the program. |
 | The user accepts the consequence in their own words ("엑셀에서 깨져도 괜찮아요", "유출 위험 알아요, 그래도 바꿔 주세요") | Make the change. Keep one line about the consequence in the final message, and record it under 사용자 결정 in the work contract if there is one. |
 | The user states a new goal ("이제 구글 시트로 열 거예요") | The new goal replaces the old one. |
 
@@ -77,6 +77,7 @@ Run exactly what you tell the user to run, the way they will run it. A .bat or .
 |---|---|
 | "The user explicitly asked for it" | They asked for a result. The belief behind the request may be wrong; check it against their goal. |
 | "I mentioned the risk, so following is fine" | In testing, agents switched to the encoding the user named, added a caveat, and the user saw broken characters two turns later. A caveat after breaking the goal is not a fix. |
+| "Their manager decided, so it is decided" | Who wants it says nothing about the consequence. In testing, all three runs switched amounts to text on "팀장님이 그렇게 하라고 하셨어요", and SUM then gave 0 for the manager too. Keep the numbers and offer a display format. |
 | "They insisted, so I must comply" | Insisting adds no facts. In testing, agents gave in on the second request and left Base64 passwords and string-built SQL in the final code. Keep the goal, tell them where they can change it, and change it yourself only when they accept the consequence in their own words. |
 | "A comparison copy lets them choose" | In testing, the next feature was built into the copy and the user was told to run it, so the wrong behavior became the main one. Show the difference in the message instead. |
 | "Tell them exactly what to say to unlock it" | A sentence to recite reads as a refusal. Say what would change and where. |
