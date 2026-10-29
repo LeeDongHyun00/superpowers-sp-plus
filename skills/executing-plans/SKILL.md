@@ -1,6 +1,6 @@
 ---
 name: executing-plans
-description: Use when executing an implementation plan in the current session as the implementer yourself — your human partner chose inline execution, or no subagent tool is available
+description: Use when executing an implementation plan in the current session as the implementer yourself — your human partner chose inline execution, or no subagent tool is available - Developer workflow: for a non-developer's small program, superpowers:agreeing-on-larger-work covers planning.
 ---
 
 # Executing Plans

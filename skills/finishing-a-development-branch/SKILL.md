@@ -1,6 +1,6 @@
 ---
 name: finishing-a-development-branch
-description: Use when implementation is complete, all tests pass, and you need to decide how to integrate the work
+description: Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - Developer workflow: for a non-developer's small program, superpowers:agreeing-on-larger-work covers planning.
 ---
 
 # Finishing a Development Branch

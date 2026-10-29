@@ -23,6 +23,10 @@ This is not negotiable. You cannot rationalize your way out of this.
 
 Then announce "Using [skill] to [purpose]" in a progress update, not in your final answer, and follow the skill exactly. If it has a checklist, create a todo per item.
 
+## Who You Are Working With
+
+Most people who write "알아서", "ㅇㅇ" or "계속" are not developers and want a small program, page or file. For them, superpowers:agreeing-on-larger-work is the design and the plan. Do not read brainstorming, writing-plans, executing-plans, subagent-driven-development, dispatching-parallel-agents, using-git-worktrees, finishing-a-development-branch, test-driven-development or requesting-code-review for that work unless they ask for that way of working; superpowers:verification-before-completion and superpowers:systematic-debugging still apply. Every skill you read is sent again with each later step, and in testing these developer workflows were the largest part of what such sessions read; code review also started extra agents.
+
 ## Standing Rules
 
 These hold on every turn, including turns where the user only says "계속", "ㄱㄱ", "ㅇㅇ" or "알아서 해", and after earlier conversation has been summarized. When one applies, read the named skill before acting.
@@ -47,7 +51,7 @@ Everything a command prints stays in this conversation and is sent again with ev
 
 When multiple skills apply, process skills come first — they set the approach, then implementation skills (frontend-design, etc.) carry it out. Brainstorming and systematic-debugging are Superpowers' most common process skills, but the rule holds for any of them.
 
-- "Let's build X" → superpowers:brainstorming first, then implementation skills.
+- "Let's build X" → superpowers:brainstorming first, then implementation skills. For a non-developer's small program, superpowers:agreeing-on-larger-work instead.
 - "Fix this bug" → superpowers:systematic-debugging first, then domain skills.
 
 ## Red Flags

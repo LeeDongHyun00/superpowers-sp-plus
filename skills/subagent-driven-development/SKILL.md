@@ -1,6 +1,6 @@
 ---
 name: subagent-driven-development
-description: Use when executing implementation plans with independent tasks in the current session
+description: Use when executing implementation plans with independent tasks in the current session - Developer workflow: for a non-developer's small program, superpowers:agreeing-on-larger-work covers planning.
 ---
 
 # Subagent-Driven Development

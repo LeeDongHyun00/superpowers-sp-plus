@@ -1,6 +1,6 @@
 ---
 name: requesting-code-review
-description: Use when completing tasks, implementing major features, or before merging to verify work meets requirements
+description: Use when completing tasks, implementing major features, or before merging to verify work meets requirements - Developer workflow: for a non-developer's small program, superpowers:agreeing-on-larger-work covers planning.
 ---
 
 # Requesting Code Review
