@@ -44,7 +44,7 @@ At most eight lines, in the user's words, before any file is created:
 이대로 만들까요? 바꿀 점이 있으면 말씀해 주세요.
 ```
 
-- When they handed the decisions over ("알아서"), choose the defaults yourself and write them under 정해 둔 것. Ask no other question.
+- Turn every open question into a default you choose and write it under 정해 둔 것, whether or not they said "알아서"; the plan's last line is the only question. Ask nothing before the plan: a separate question costs the user a turn and usually comes back as "알아서 해".
 - 정해 둔 것 names every default the user will notice when they use the result: hours and time units, what each screen shows, where results are saved and under which file name. In testing, a booking plan that listed its extras but not its one-hour slots never gave the owner the chance to say the salon books every 30 minutes.
 - Extras from superpowers:announcing-additions go into the plan as one more line; they never replace 정해 둔 것. No default hides or shortens what the user asked to see (masked phone numbers, a login in front of a list they asked for).
 - For tidying a folder, the plan lists which files would move to which folder.
@@ -107,6 +107,7 @@ AI가 대화가 길어져도 합의한 내용을 잊지 않도록 적어 두는 
 |---|---|
 | "They said 알아서 and 바로, so skip the plan" | 알아서 hands you the choices, not the look before building. Make the choices and show them in eight lines. |
 | "A plan slows a novice down" | One "ㅇㅇ" costs a turn. Rebuilding the wrong board costs many. |
+| "I should ask their hours or file names before planning" | A guess in the plan is one line to correct ("30분 단위로 바꿔 주세요"); a question before the plan is a turn with nothing to look at. |
 | "I'll remember what we agreed" | Summaries replace your messages first. AGENTS.md is kept word for word. |
 | "Approving the plan covers publishing" | Publishing is its own step with its own yes. |
 | "Rewriting the whole contract is simpler" | Every version is resent with each later step. Edit the changed lines. |
