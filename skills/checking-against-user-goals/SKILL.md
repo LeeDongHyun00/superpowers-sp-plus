@@ -35,7 +35,7 @@ When you name this skill to the user because it made you keep something or pause
 |---|---|
 | One version satisfies the instruction's wording and every goal | Build that version. Say in one line what you chose and why. Often only the look has to change: amounts stay numbers and get a display format (`#,##0"원"`), dates stay dates. |
 | No version satisfies both | Build the version that keeps the goal working. Send the conflict notice. Continue the rest of the request. |
-| The user repeats the request with no new facts: who wants it ("팀장님이 그렇게 하라고 하셨어요", "사장님 지시예요"), "다들 그래요", the same claim again, "그냥 해 주세요" | Change no file for it this turn: the goal-preserving version stays. In one line, say it stays and where they can change it themselves (file and line, or setting). When someone else asked for it, add one sentence the user can pass on to that person, in that person's terms: "사장님께는 '전화번호 앞 0을 지우면 택배 송장이 안 나가서 그대로 두었습니다'라고 전하시면 돼요." Do not repeat the whole explanation, and build no second copy, file or option of the program. |
+| The user repeats the request with no new facts: who wants it ("팀장님이 그렇게 하라고 하셨어요", "사장님 지시예요"), their own experience ("이 일만 몇 년 했어요"), "다들 그래요", the same claim again, "그냥 해 주세요" | Change no file for it this turn: the goal-preserving version stays. In one line, say it stays and where they can change it themselves (file and line, or setting). When someone else asked for it, add one sentence the user can pass on to that person, in that person's terms: "사장님께는 '전화번호 앞 0을 지우면 택배 송장이 안 나가서 그대로 두었습니다'라고 전하시면 돼요." Do not repeat the whole explanation, and build no second copy, file or option of the program. |
 | The user accepts the consequence in their own words, naming it ("엑셀에서 깨져도 괜찮아요", "SUM 안 돼도 괜찮아요", "유출 위험 알아요, 그래도 바꿔 주세요") | Make the change. Keep one line about the consequence in the final message, and record it under 사용자 결정 in the work contract if there is one. A repeat that does not name the consequence is not this row. |
 | The user states a new goal ("이제 구글 시트로 열 거예요") | The new goal replaces the old one. |
 
@@ -82,7 +82,7 @@ Run exactly what you tell the user to run, the way they will run it. A .bat or .
 | "They insisted, so I must comply" | Insisting adds no facts. In testing, agents gave in on the second request and left Base64 passwords and string-built SQL in the final code. Keep the goal, tell them where they can change it, and change it yourself only when they accept the consequence in their own words. |
 | "A comparison copy lets them choose" | In testing, the next feature was built into the copy and the user was told to run it, so the wrong behavior became the main one. Show the difference in the message instead. |
 | "Tell them exactly what to say to unlock it" | A sentence to recite reads as a refusal. Say what would change and where. |
-| "They have years of experience with this" | Experience with a tool does not test this claim. Show the difference with their own data. |
+| "They have years of experience with this" | Experience with a tool does not test this claim. Show the difference with their own data, and keep your version when they repeat it with their years of experience: in testing, an agent changed the rounding on that repeat and four amounts came out 1원 short. |
 | "Correcting the user is rude" | One short notice with a concrete consequence is help. |
 | "Tests pass" | Tests check your code. The goal is how the user will use the result. |
 | "They know their business" | On their goals, yes. A technical claim they heard still needs checking. |
