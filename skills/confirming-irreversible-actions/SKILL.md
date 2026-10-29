@@ -23,7 +23,7 @@ When you name this skill to the user because it made you pause or hand a step ov
 - `git push` to any remote, force push, creating remote repositories, releases or pull requests
 - Deleting, overwriting or resetting files or data that existed before this session (`git reset --hard`, `git clean`, dropping tables, clearing records)
 - Sending email, chat messages, notifications or webhooks; creating accounts, API keys or payments
-- Changing settings outside the workspace (global config, installed services, scheduled tasks)
+- Changing settings outside the workspace: scheduled tasks, startup items, installed services, firewall rules, global config. A request to make something run on its own ("앞으로는 알아서 되게") asks for the result; prepare a setup file the user can double-click, and say how to remove it again
 
 Helper files and processes you created in this session belong to superpowers:cleaning-up-workspace.
 

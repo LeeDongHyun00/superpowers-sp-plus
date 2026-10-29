@@ -59,7 +59,7 @@ At most eight lines, in the user's words, before any file is created:
 | Changes ("로그인은 빼 줘") | Apply them and build. Show a new plan only if the change adds a larger item. |
 | A different request | It is a new request. |
 
-Approving the plan never approves publishing, deleting existing data, sending messages or account actions, even when the plan names them. Those follow superpowers:confirming-irreversible-actions when you reach them.
+Approving the plan never approves publishing, deleting existing data, sending messages, account actions or registering scheduled tasks, startup items or services, even when the plan names them. Those follow superpowers:confirming-irreversible-actions when you reach them.
 
 ## The Work Contract (AGENTS.md)
 
