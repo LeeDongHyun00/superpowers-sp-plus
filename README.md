@@ -8,17 +8,19 @@ For the original Superpowers documentation, see the [upstream README at v7.0.1](
 
 | When you | Codex with SP+ |
 |---|---|
-| ask for something larger than a small change (several features or screens, login, stored data, installs) | shows a plan of at most eight lines first and starts after any reply that does not change it ("ㅇㅇ", "계속", "알아서 해") |
+| ask for something larger than a small change (several features or screens, login, stored data, installs) | shows a plan of at most eight lines first, with the defaults you will notice (hours, time units, file names), and starts after any reply that does not change it ("ㅇㅇ", "계속", "알아서 해") |
 | come back after a long conversation, or start a new one | continues from the plan it keeps in your project's `AGENTS.md`: "계속" means the next unchecked item, and when every item is done it says so and starts nothing new |
 | reach a step that is hard to undo: publishing or deploying, pushing, deleting files you already had, sending messages, acting on your accounts | stops at that step, says once what is ready, what the step would do and how you can do it yourself, and carries on with the rest. It takes the step only after a yes that names it ("배포해 줘"), and it does not retry a failed attempt on its own |
-| ask for something because of what you heard ("CSV는 UTF-8이면 엑셀에서 안 깨진대요"), or with a reason that makes a risk sound safe ("휴지통에 남으니까 지워도 돼요") | keeps the version that serves what you said the result is for, shows the difference once with your data and tells you where you can change it yourself |
-| hand the decisions over ("예쁘게", "필요한 거 다") | lists everything it added that you did not ask for under "요청 외 추가" |
+| ask for something because of what you heard ("CSV는 UTF-8이면 엑셀에서 안 깨진대요"), or with a reason that makes a risk sound safe ("휴지통에 남으니까 지워도 돼요") | keeps the version that serves what you said the result is for, in every later file built from the same data too, shows the difference once with your data and tells you where you can change it yourself |
+| ask it to tidy a folder or to delete files you already had | shows which files would move where before touching them. If you repeat a reason it has just corrected ("휴지통에서 살리면 돼요, 그냥 지워"), it keeps the files and tells you how to delete them yourself |
+| say a file is missing | lists what it moved, renamed or deleted, the Recycle Bin included, and offers to put it back |
+| hand the decisions over ("예쁘게", "필요한 거 다") | lists everything it added that you did not ask for under "요청 외 추가". An extra never changes what you asked for: a file you named keeps its name on every run |
 | get finished work | lists new files, helper files and running servers, and asks once whether to remove its helpers |
 | are given something to run, such as a `.bat` file to double-click | has run exactly that, the way you will run it, without opening windows on your screen |
 
 ## Requirements
 
-- The Codex CLI with plugin support. SP+ was tested with Codex CLI 0.164.0-alpha.11.1 on Windows 11.
+- The Codex CLI with plugin support. SP+ was tested with Codex CLI 0.164.0-alpha.11.1 and 0.165.0-alpha.1.2 on Windows 11.
 - Git. Codex uses it to download the plugin from GitHub.
 
 ## Install
@@ -43,7 +45,7 @@ codex plugin list
 
 ```text
 PLUGIN                           STATUS              VERSION     SOURCE
-superpowers@superpowers-sp-plus  installed, enabled  7.0.1-sp.7  ...
+superpowers@superpowers-sp-plus  installed, enabled  7.0.1-sp.8  ...
 ```
 
 SP+ applies to Codex sessions started after the install.
@@ -109,11 +111,11 @@ codex plugin marketplace remove superpowers-sp-plus
 
 | Skill | Named to users as | Purpose |
 |---|---|---|
-| `agreeing-on-larger-work` (new) | 작업 범위 확인 | Plan larger work first and keep the agreed plan in `AGENTS.md` |
-| `confirming-irreversible-actions` (new) | 되돌리기 어려운 작업 | Publish, delete, send and account steps only after a yes that names them; hand the step over instead of blocking; no retry after a failed attempt |
-| `checking-against-user-goals` (new) | 목표 확인 | Keep the user's stated goal when an instruction rests on a belief or a reassuring reason, or would break a rule already written in the project |
+| `agreeing-on-larger-work` (new) | 작업 범위 확인 | Plan larger work first, with the defaults users will notice, and keep the agreed plan in `AGENTS.md`; tidying the user's files is larger work too |
+| `confirming-irreversible-actions` (new) | 되돌리기 어려운 작업 | Publish, delete, send and account steps only after a yes that names them; hand the step over instead of blocking; no retry after a failed attempt; a yes that repeats a corrected belief keeps the files; a missing file gets a list of what was moved or deleted |
+| `checking-against-user-goals` (new) | 목표 확인 | Keep the user's stated goal when an instruction rests on a belief or a reassuring reason, or would break a rule already written in the project; the kept version carries into later files built from the same data |
 | `cleaning-up-workspace` (new) | 작업 폴더 정리 | Report new files, helpers and running servers; ask once about removing helpers |
-| `announcing-additions` (new) | | List unrequested additions under "요청 외 추가"; after finished work, report instead of starting something new |
+| `announcing-additions` (new) | | List unrequested additions under "요청 외 추가"; extras never change how a requested item works; after finished work, report instead of starting something new |
 | `using-superpowers` (changed) | | Six standing rules that hold on every turn, including a bare "계속"; talk rules for Korean users; keep tool output small |
 | `brainstorming` (changed) | | Opting out of questions skips the questions, not the plan for larger work |
 
@@ -122,6 +124,8 @@ All other skills are unchanged from Superpowers 7.0.1. The plugin keeps the name
 ## How It Was Tested
 
 Each version was compared with the one before it in scripted sessions where simulated Korean non-developers (a salon owner, a club treasurer, an impatient online seller and others) asked Codex for small programs and replied the way beginners do. Hidden acceptance checks and blind reviewers graded the results. The test harness is not part of this repository.
+
+In the latest comparison, version 7.0.1-sp.8 against 7.0.1-sp.4 (13 scenarios, three runs each, 78 sessions, blind reviewers), SP+ followed a planted wrong belief in 5 of 30 cases instead of 11 of 29, made no literally false completion claims (17 before), started larger work without a plan 8 times in 52 instead of 37 in 56, and kept an accurate work contract in 23 sessions, at the same cost. Requirements passed in 189 of 195 checks (183 of 194 before). Known weak spots: a repeated request that cites a manager ("팀장님이 그렇게 하래요") is still often followed after a warning, and an unrequested privacy measure (masked phone numbers) sometimes hid what the user asked to see.
 
 SP+ is experimental. It has been tested only with the Codex CLI on Windows and with gpt-6.1-sol at medium reasoning.
 

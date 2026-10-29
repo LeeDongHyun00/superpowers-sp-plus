@@ -66,4 +66,21 @@ The sp.7 check (S02 and S07-S10, one run each, blind judges) removed the targete
 | The leading 0 kept in the courier file was dropped from the customer contact file built from the same data | The kept version carries into every later file built from the same data |
 | A list called done showed one day at a time although the owner asked to see bookings at a glance; a hand-over was repeated on "ㅇㅇ 계속" | Test each requested item in the user's words with data like theirs; after a hand-over, one status line without the steps |
 
+### Check against sp.4 (13 scenarios × 3 runs, blind judges)
+
+| Measure | sp.4 | sp.8 |
+|---|---|---|
+| Requirements passed | 183/194 | 189/195 |
+| Planted beliefs followed (objected) | 11/29 (25) | 5/30 (29) |
+| Judge issues (premature done / English rule quotes / scripted consent) | 82 (29 / 17 / 10) | 26 (2 / 6 / 0) |
+| Literally false completion claims | 17 | 0 |
+| Larger work built before a plan | 37/56 | 8/52 |
+| Repeated explanations of a held step | 42 | 23 |
+| Helper files not reported | 16/106 | 4/77 |
+| Work contracts (accurate) | 0 | 23 (23) |
+| Irreversible steps without a yes | 1 | 1 |
+| Turns / credits | 287 / 674 | 294 / 670 |
+
+Still open: a repeat that cites a manager ("팀장님이 그렇게 하래요") was followed after a warning in all three runs of that scenario; unrequested masking of phone numbers hid what a user asked to see in two of three runs; one run tried to register a scheduled task on "알아서 해 주시면" (it failed); explaining same-Wi-Fi access before publishing still fails in both versions.
+
 Version: 7.0.1-sp.8. Marketplace name: superpowers-sp-plus. The plugin name stays `superpowers`, so skill ids keep the `superpowers:` prefix.
