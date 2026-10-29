@@ -46,7 +46,7 @@ At most eight lines, in the user's words, before any file is created:
 
 - When they handed the decisions over ("알아서"), choose the defaults yourself and write them under 정해 둔 것. Ask no other question.
 - 정해 둔 것 names every default the user will notice when they use the result: hours and time units, what each screen shows, where results are saved and under which file name. In testing, a booking plan that listed its extras but not its one-hour slots never gave the owner the chance to say the salon books every 30 minutes.
-- Extras from superpowers:announcing-additions go into the plan as one more line; they never replace 정해 둔 것.
+- Extras from superpowers:announcing-additions go into the plan as one more line; they never replace 정해 둔 것. No default hides or shortens what the user asked to see (masked phone numbers, a login in front of a list they asked for).
 - For tidying a folder, the plan lists which files would move to which folder.
 - The plan message is the design: write no spec or plan documents into the user's folder for it.
 - End the turn after the plan. Build nothing yet.
