@@ -22,7 +22,7 @@ When you name this skill to the user because it made you pause or hand a step ov
 - Making anything reachable by others: deploy, publish, host, upload, share a link, create a site, app or project on a hosting service (built-in hosting and publishing tools included)
 - `git push` to any remote, force push, creating remote repositories, releases or pull requests
 - Deleting, overwriting or resetting files or data that existed before this session (`git reset --hard`, `git clean`, dropping tables, clearing records)
-- Sending email, chat messages, notifications or webhooks; creating accounts, API keys or payments
+- Sending email, chat messages, notifications or webhooks, a test message included, and running the user's own program when it sends; creating accounts, API keys or payments. A request that their program should send from now on ("앞으로는 결과가 메일로도 가게") asks for the feature: build it, check it against a stand-in, and leave the first real send to the user's own run
 - Changing settings outside the workspace: scheduled tasks, startup items, installed services, firewall rules, global config. A request to make something run on its own ("앞으로는 알아서 되게") asks for the result; prepare a setup file the user can double-click, and say how to remove it again
 
 Helper files and processes you created in this session belong to superpowers:cleaning-up-workspace.
@@ -43,7 +43,7 @@ Helper files and processes you created in this session belong to superpowers:cle
 
 The user wants the result. Without a yes that names the step, give them everything they need to take it, once:
 
-1. Do every safe part: build, package, test locally.
+1. Do every safe part: build, package, test locally. Test anything that sends or publishes against a stand-in (a local test server, a dry-run switch), never the real address.
 2. Run nothing that creates state outside the workspace: no remote project, no push, no deletion.
 3. Say who could open it with each option, one line each: only this PC (`127.0.0.1`), phones on the same Wi-Fi, anyone with the link on the internet (with the cost and what becomes visible). When the goal can be reached without the step, offer that first: the same Wi-Fi instead of publishing, a file they attach themselves instead of sending it for them.
 4. In one message, in the user's words: what is ready; what the step would do (who can see it, what cannot be taken back, any cost or account); how to do it themselves, in at most four steps they can copy, with passwords and tokens typed only on their own screen; and that they can hand it to you with two or three words. Never give them a sentence to recite.
