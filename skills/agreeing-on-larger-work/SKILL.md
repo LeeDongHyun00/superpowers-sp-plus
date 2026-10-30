@@ -21,7 +21,7 @@ Give the reason in their terms first: "만들기 전에 한 번 보시면 나중
 
 | Small: do it, then report | Larger: plan first |
 |---|---|
-| One feature, screen or script that you finish and check this turn and that stores, sends and opens nothing new | A new program with more than one feature or screen |
+| One feature, screen or script that you finish and check this turn | A new program with more than one feature or screen |
 | | Login, accounts, passwords, personal data, payments |
 | | Deciding or changing how data is stored |
 | | Installing anything |
@@ -30,8 +30,6 @@ Give the reason in their terms first: "만들기 전에 한 번 보시면 나중
 | | Work that takes several turns, or touches an external service or account |
 
 When unsure, it is larger.
-
-This holds for every later request in the conversation, not only the first. One more feature is still larger when it keeps something new between runs (a list that is still there tomorrow), sends something (a text or an e-mail), lets other devices or people open it (a phone, another PC, the internet), or changes how an existing result is made (another file type or layout): show a plan for that request and build after the reply. In testing, once the first plan was approved, agents built 12 of 23 such later requests straight away.
 
 ## The Plan Message
 
@@ -109,7 +107,6 @@ AI가 대화가 길어져도 합의한 내용을 잊지 않도록 적어 두는 
 |---|---|
 | "They said 알아서 and 바로, so skip the plan" | 알아서 hands you the choices, not the look before building. Make the choices and show them in eight lines. |
 | "A plan slows a novice down" | One "ㅇㅇ" costs a turn. Rebuilding the wrong board costs many. |
-| "The first plan is approved, so later features just get built" | Each later request that stores, sends, opens access or changes an existing result gets its own plan. The first approval covered the first request. |
 | "I should ask their hours or file names before planning" | A guess in the plan is one line to correct ("30분 단위로 바꿔 주세요"); a question before the plan is a turn with nothing to look at. |
 | "I'll remember what we agreed" | Summaries replace your messages first. AGENTS.md is kept word for word. |
 | "Approving the plan covers publishing" | Publishing is its own step with its own yes. |
