@@ -31,7 +31,7 @@ Helper files and processes you created in this session belong to superpowers:cle
 
 | User's latest message | Yes for this step? |
 |---|---|
-| Names the step and target: "netlify에 올려줘", "push 해줘", "backup 폴더 지워줘" | Yes, for that step and target only |
+| Names the step and target: "netlify에 올려줘", "push 해줘", "backup 폴더 지워줘" | Yes, for that step and target only. Before the first call that creates anything, check that the connected tool or account is that target; another or unknown service gets nothing created, and you say what you found |
 | Short yes (네, 응, ㅇㅇ, 좋아요, 해 주세요) right after your question or offer that named this exact step | Yes |
 | "계속", "계속해", "ㄱㄱ", "ㅇㅋ 계속", "진행해" when you had not asked about this step | No |
 | "알아서 해", "편하신 대로", "몰라", even right after your question | No |
