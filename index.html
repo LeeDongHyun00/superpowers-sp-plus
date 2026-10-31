@@ -38,10 +38,10 @@ a{color:var(--accent)}
 .step .n{flex:0 0 34px;height:34px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:flex;align-items:center;justify-content:center;font-weight:700}
 .step .body{flex:1;min-width:0}
 .tabs{display:flex;gap:6px;margin:10px 0 0}
-.tab{padding:7px 14px;border:1px solid var(--line);border-bottom:none;border-radius:8px 8px 0 0;background:var(--bg);color:var(--muted);cursor:pointer;font:inherit;font-size:.95rem}
+.tab{white-space:nowrap;padding:7px 14px;border:1px solid var(--line);border-bottom:none;border-radius:8px 8px 0 0;background:var(--bg);color:var(--muted);cursor:pointer;font:inherit;font-size:.95rem}
 .tab[aria-selected="true"]{background:var(--code-bg);color:var(--code-ink);border-color:var(--code-bg)}
 .codebox{position:relative;margin:0 0 14px}
-.codebox pre{margin:0;background:var(--code-bg);color:var(--code-ink);padding:14px 14px 14px;border-radius:0 10px 10px 10px;overflow:auto;font-size:.88rem;line-height:1.55;font-family:ui-monospace,"Cascadia Mono",Consolas,"D2Coding",Menlo,monospace}
+.codebox pre{margin:0;background:var(--code-bg);color:var(--code-ink);padding:44px 14px 14px;border-radius:0 10px 10px 10px;overflow:auto;font-size:.88rem;line-height:1.55;font-family:ui-monospace,"Cascadia Mono",Consolas,"D2Coding",Menlo,monospace}
 .codebox.single pre{border-radius:10px}
 .copy{position:absolute;top:8px;right:8px;padding:6px 10px;border-radius:6px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:var(--code-ink);font:inherit;font-size:.85rem;cursor:pointer}
 .copy:hover{background:rgba(255,255,255,.18)}
@@ -100,8 +100,8 @@ pre code{background:none;border:none;padding:0;font-size:inherit}
     <h3 style="margin-top:4px">아래 상자를 복사해서 붙여넣고 <kbd>Enter</kbd></h3>
     <p>오른쪽 위 <strong>복사</strong> 버튼을 누른 뒤 터미널에 붙여넣으세요. 설치와 확인까지 한 번에 돼요.</p>
     <div class="tabs" role="tablist">
-      <button class="tab" role="tab" data-os="win" aria-selected="true">Windows (PowerShell)</button>
-      <button class="tab" role="tab" data-os="mac" aria-selected="false">Mac · Linux</button>
+      <button class="tab" role="tab" data-os="win" aria-selected="true">Windows</button>
+      <button class="tab" role="tab" data-os="mac" aria-selected="false">Mac / Linux</button>
     </div>
     <div class="codebox panel" data-os="win"><button class="copy" type="button">복사</button><pre><code>$codex = Get-Command codex -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source
 if (-not $codex) { $codex = (Get-ChildItem "$env:LOCALAPPDATA\OpenAI\Codex\bin" -Recurse -Filter codex.exe | Sort-Object LastWriteTime | Select-Object -Last 1).FullName }
@@ -125,8 +125,8 @@ if (-not $codex) { $codex = (Get-ChildItem "$env:LOCALAPPDATA\OpenAI\Codex\bin" 
 <h3>권장 설정 (선택)</h3>
 <p>명령이 출력한 내용은 모두 대화에 남고 이후 단계마다 다시 보내져요. 아래 상자를 붙여넣으면 그 양에 상한을 둬요. SP+는 이 설정으로 측정했어요. 두 번 붙여넣어도 한 줄만 들어가요.</p>
 <div class="tabs" role="tablist">
-  <button class="tab" role="tab" data-os="win" aria-selected="true">Windows (PowerShell)</button>
-  <button class="tab" role="tab" data-os="mac" aria-selected="false">Mac · Linux</button>
+  <button class="tab" role="tab" data-os="win" aria-selected="true">Windows</button>
+  <button class="tab" role="tab" data-os="mac" aria-selected="false">Mac / Linux</button>
 </div>
 <div class="codebox panel" data-os="win"><button class="copy" type="button">복사</button><pre><code>$cfg = "$env:USERPROFILE\.codex\config.toml"
 if (-not (Test-Path $cfg)) { New-Item -ItemType File -Path $cfg -Force | Out-Null }
@@ -179,8 +179,8 @@ if (-not (Select-String -Path $cfg -Pattern '^\s*tool_output_token_limit' -Quiet
 <h2 id="update">업데이트와 삭제</h2>
 <p><strong>업데이트</strong>: 붙여넣은 뒤 Codex를 새로 여세요.</p>
 <div class="tabs" role="tablist">
-  <button class="tab" role="tab" data-os="win" aria-selected="true">Windows (PowerShell)</button>
-  <button class="tab" role="tab" data-os="mac" aria-selected="false">Mac · Linux</button>
+  <button class="tab" role="tab" data-os="win" aria-selected="true">Windows</button>
+  <button class="tab" role="tab" data-os="mac" aria-selected="false">Mac / Linux</button>
 </div>
 <div class="codebox panel" data-os="win"><button class="copy" type="button">복사</button><pre><code>$codex = Get-Command codex -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source
 if (-not $codex) { $codex = (Get-ChildItem "$env:LOCALAPPDATA\OpenAI\Codex\bin" -Recurse -Filter codex.exe | Sort-Object LastWriteTime | Select-Object -Last 1).FullName }
@@ -190,8 +190,8 @@ if (-not $codex) { $codex = (Get-ChildItem "$env:LOCALAPPDATA\OpenAI\Codex\bin" 
 
 <p><strong>삭제</strong>:</p>
 <div class="tabs" role="tablist">
-  <button class="tab" role="tab" data-os="win" aria-selected="true">Windows (PowerShell)</button>
-  <button class="tab" role="tab" data-os="mac" aria-selected="false">Mac · Linux</button>
+  <button class="tab" role="tab" data-os="win" aria-selected="true">Windows</button>
+  <button class="tab" role="tab" data-os="mac" aria-selected="false">Mac / Linux</button>
 </div>
 <div class="codebox panel" data-os="win"><button class="copy" type="button">복사</button><pre><code>$codex = Get-Command codex -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source
 if (-not $codex) { $codex = (Get-ChildItem "$env:LOCALAPPDATA\OpenAI\Codex\bin" -Recurse -Filter codex.exe | Sort-Object LastWriteTime | Select-Object -Last 1).FullName }
